@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "/pokers", to: "pokers#create"
+  get "/pokers", to: "pokers#new"
 
   resources :pokers
   # For details on the DSL available within this file, 
