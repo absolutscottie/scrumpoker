@@ -1,25 +1,13 @@
-# README
+# Scrum Poker
+A scrum poker implementation created with Ruby on Rails. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Poker sessions can be created by navigating to the /poker path. Creating a session will provide the user with a link that can be shared with the scrum team.
 
-Things you may want to cover:
+Team members can join and vote
 
-* Ruby version
+## Current Status
+Very early in the development process. Currently implementing the ability for the team to submit votes.
 
-* System dependencies
+## Setup Instructions
+TODO
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# scrumpoker
