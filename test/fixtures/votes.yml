@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pokerid: MyString
+  integer: MyString
+  username: MyString
+  string: MyString
+  value: MyString
+  string: MyString
+
+two:
+  pokerid: MyString
+  integer: MyString
+  username: MyString
+  string: MyString
+  value: MyString
+  string: MyString
