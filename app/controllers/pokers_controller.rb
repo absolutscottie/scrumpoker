@@ -15,7 +15,8 @@ class PokersController < ApplicationController
 
     if @poker.save
       # probably a better way to do this. The idea is that we want to give the poker 'owner'
-      # special privileges (remove user, show point estimates, etc). 
+      # special privileges (remove user, show point estimates, etc) so we send them to the
+      # show page with a query arg that indicates that they own it
       redirect_to controller: 'pokers', action: 'show', id: @poker.id, owner: 1
     else
       render :new
