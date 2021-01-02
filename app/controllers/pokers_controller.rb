@@ -13,7 +13,9 @@ class PokersController < ApplicationController
   def create
     @poker = Poker.new(poker_params)
 
-    if @poker.save 
+    if @poker.save
+      # probably a better way to do this. The idea is that we want to give the poker 'owner'
+      # special privileges (remove user, show point estimates, etc). 
       redirect_to controller: 'pokers', action: 'show', id: @poker.id, owner: 1
     else
       render :new
