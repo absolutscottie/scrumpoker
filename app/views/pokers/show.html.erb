@@ -1,15 +1,75 @@
 <h1 id="title">current story: <%= @poker.title %></h1>
 
-<%= form_with url: "/vote", method: :post do |form| %>
-  <div>
-    <%= form.submit "0" %>
-    <%= form.submit "1" %>
-    <%= form.submit "2" %>
-    <%= form.submit "3" %>
-    <%= form.submit "5" %>
-    <%= form.submit "8" %>
-    <%= form.submit "13" %>
-    <%= form.submit "21" %>
-    <%= form.submit "?" %>
-  </div>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "0" %>
+  <%= form.button "0", type: "submit" %>
+
 <% end %>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "1" %>
+  <%= form.button "1", type: "submit" %>
+
+<% end %>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "2" %>
+  <%= form.button "2", type: "submit" %>
+
+<% end %>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "3" %>
+  <%= form.button "3", type: "submit" %>
+
+<% end %>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "5" %>
+  <%= form.button "5", type: "submit" %>
+
+<% end %>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "8" %>
+  <%= form.button "8", type: "submit" %>
+
+<% end %>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "13" %>
+  <%= form.button "13", type: "submit" %>
+
+<% end %>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "21" %>
+  <%= form.button "21", type: "submit" %>
+
+<% end %>
+<%= form_with model: @vote do |form| %>
+
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :poker_id, value: @poker.id %>
+  <%= form.hidden_field :value, value: "?" %>
+  <%= form.button "?", type: "submit" %>
+
+<% end %>
+

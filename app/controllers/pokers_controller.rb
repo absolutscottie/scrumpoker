@@ -4,6 +4,7 @@ class PokersController < ApplicationController
 
   def show
     @poker = Poker.find(params[:id])
+    @vote = Vote.new
   end
 
   def new
