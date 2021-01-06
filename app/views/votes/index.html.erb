@@ -1,0 +1,8 @@
+<%= form_with model: @vote do |form| %>
+<div>
+  <%= form.hidden_field :username, value: "scottie" %>
+  <%= form.hidden_field :post_id, value: "1" %>
+  <%= form.hidden_field :value, value: "0" %>
+  <%= form.button "0", type: "submit" %>
+</div>
+<% end %>
