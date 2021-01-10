@@ -5,6 +5,18 @@ class PokersController < ApplicationController
   def show
     @poker = Poker.find(params[:id])
     @vote = Vote.new
+    @owner = params[:owner]
+  end
+
+  def update
+    @poker = Poker.find(poker_params[:id])
+    if @poker != nil
+      @poker.title = poker_params[:title]
+      @poker.save
+      head :ok
+      return
+    end 
+    head :bad_request
   end
 
   def new
@@ -26,6 +38,6 @@ class PokersController < ApplicationController
 
 private
   def poker_params
-    params.require(:poker).permit(:title)
+    params.require(:poker).permit(:id, :title, :owner)
   end
 end
