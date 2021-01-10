@@ -1,75 +1,123 @@
-<h1 id="title">current story: <%= @poker.title %></h1>
-
-<%= form_with model: @vote do |form| %>
-
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "0" %>
-  <%= form.button "0", type: "submit" %>
-
+<div class="header">
+<% if @owner == "1" %>
+  <%= form_with model: @poker do |form| %>
+    <%= form.hidden_field :id, value: @poker.id %>
+    <%= form.text_field :title, value: @poker.title %>
+    <%= form.button "change story", type: "submit" %>
+  <% end %>
+<% else %>
+  current story: <%= @poker.title %>
 <% end %>
-<%= form_with model: @vote do |form| %>
+</div>
+<div>
+  <div class="vote_options">
+    <div>Choose your vote:</div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "0" %>
+        <%= form.button "0", type: "submit", class: "vote_button" %>
+      <% end %>
+    </div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
 
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "1" %>
-  <%= form.button "1", type: "submit" %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "1" %>
+        <%= form.button "1", type: "submit", class: "vote_button" %>
 
-<% end %>
-<%= form_with model: @vote do |form| %>
+      <% end %>
+    </div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
 
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "2" %>
-  <%= form.button "2", type: "submit" %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "2" %>
+        <%= form.button "2", type: "submit", class: "vote_button" %>
 
-<% end %>
-<%= form_with model: @vote do |form| %>
+      <% end %>
+    </div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
 
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "3" %>
-  <%= form.button "3", type: "submit" %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "3" %>
+        <%= form.button "3", type: "submit", class: "vote_button" %>
 
-<% end %>
-<%= form_with model: @vote do |form| %>
+      <% end %>
+    </div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
 
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "5" %>
-  <%= form.button "5", type: "submit" %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "5" %>
+        <%= form.button "5", type: "submit", class: "vote_button" %>
 
-<% end %>
-<%= form_with model: @vote do |form| %>
+      <% end %>
+    </div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
 
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "8" %>
-  <%= form.button "8", type: "submit" %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "8" %>
+        <%= form.button "8", type: "submit", class: "vote_button" %>
 
-<% end %>
-<%= form_with model: @vote do |form| %>
+      <% end %>
+    </div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
 
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "13" %>
-  <%= form.button "13", type: "submit" %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "13" %>
+        <%= form.button "13", type: "submit", class: "vote_button" %>
 
-<% end %>
-<%= form_with model: @vote do |form| %>
+      <% end %>
+    </div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
 
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "21" %>
-  <%= form.button "21", type: "submit" %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "21" %>
+        <%= form.button "21", type: "submit", class: "vote_button" %>
 
-<% end %>
-<%= form_with model: @vote do |form| %>
+      <% end %>
+    </div>
+    <div class="vote_option">
+      <%= form_with model: @vote do |form| %>
 
-  <%= form.hidden_field :username, value: "scottie" %>
-  <%= form.hidden_field :poker_id, value: @poker.id %>
-  <%= form.hidden_field :value, value: "?" %>
-  <%= form.button "?", type: "submit" %>
+        <%= form.hidden_field :username, value: "scottie" %>
+        <%= form.hidden_field :poker_id, value: @poker.id %>
+        <%= form.hidden_field :value, value: "?" %>
+        <%= form.button "?", type: "submit", class: "vote_button" %>
 
-<% end %>
+      <% end %>
+    </div>
+  </div>
+  <br>
 
+  <div class="cards">
+    <div class="card">
+      <b>scott</b>
+    </div>
+    <div class="card">
+      <b>bradley</b>
+    </div>
+    <div class="card">
+      <b>ramiro</b>
+    </div>
+    <div class="card">
+      <b>nihanth</b>
+    </div>
+    <div class="card">
+      <b>tanner</b>
+    </div>
+  </div>
+</div>
