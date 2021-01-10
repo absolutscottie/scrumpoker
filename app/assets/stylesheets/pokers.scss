@@ -1,3 +1,45 @@
 // Place all the styles related to the Pokers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.header {
+    width: 50%;
+}
+
+.vote_options {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.vote_option {
+    float: left;
+    margin-right: 10px;
+}
+
+.vote_button {
+    width: 30px;
+}
+
+.card {
+    float: left;
+    border-style: dotted;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    background-color: red;
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.cards {
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.in_view {
+    background-color: white;
+}
